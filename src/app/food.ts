@@ -1,4 +1,9 @@
 export class Food {
-    id: number;
     name: string;
+    ratings: number;
+    price: string;
+    address: string;
+    url: string; 
+    image: string;
+    id: number;
 }

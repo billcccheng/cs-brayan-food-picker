@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-
-import { Food }  from './food';
+//import { Foods }  from './foods';
 
 @Component({
     selector: 'app-root',
@@ -9,5 +8,5 @@ import { Food }  from './food';
 })
 
 export class AppComponent {
-    title = 'Food!';
+    title = 'This is the College Station / Bryan Food Random Picker';
 }

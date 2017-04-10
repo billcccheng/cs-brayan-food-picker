@@ -1,0 +1,14 @@
+<div *ngIf="food">
+  <h2>{{food.name}} details!</h2>
+  <button (click)="goBack()">Back</button>
+    <ul>
+        <li><label>name: </label>{{food.name}}</li>
+        <li><a href="{{food.url}}">Take me to Yelp</a></li>
+    </ul>
+  <div>
+  </div>
+  <div>
+      <img src="{{food.image}}"  width="500" height="auto">
+  </div>
+</div>
+

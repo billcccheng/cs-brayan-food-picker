@@ -54,23 +54,21 @@ export class FoodComponent implements OnInit {
     }
 
     gotoDetail(): void {
-        //console.log(this.selectedFood.id);
         this.router.navigate(['/detail', this.selectedFood.id]);
     }
     
     selectRandomFood(): void {
-        let id = this.getRandom();
-        this.selectedFood = FOODS[id-1];
-        //this.router.navigate(['/detail', id]);
+        //let id = this.getRandomFood();
+        this.selectedFood = this.getRandomFood();
     }
 
-    getRandom(): number {
-        let min = 1;
-        let max = Math.floor(this.foods.length);
-        return Math.floor(Math.random() * (max - min + 1)) + min;
+    getRandomFood(): Food{
+        let min = 0;
+        let max = Math.floor(this.foods.length) - 1;
+        let index = Math.floor(Math.random() * (max - min + 1)) + min;
+        return this.foods[index];
     }
 
 }
-
 
 

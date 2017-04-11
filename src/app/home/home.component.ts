@@ -22,7 +22,7 @@ export class HomeComponent implements OnInit {
         this.router.navigate(['/foods', this.getSelectedOptions()]);
     }
 
-    private options = [
+    options = [
         {name:'Chinese', value:'Chinese', checked:false},
         {name:'Korean', value:'Korean', checked:false},
         {name:'Japanese', value:'Japanese', checked:false},

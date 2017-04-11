@@ -37,14 +37,13 @@ export class FoodComponent implements OnInit {
 
     onSelect(food: Food): void {
         this.selectedFood = food;
-        let googleMap = this.getGoogleMap(this.selectedFood.address);
-        this.selectedFood.address = googleMap;
+        this.getGoogleMap();
     }
     
-    getGoogleMap(address: string): string {
+    getGoogleMap(): void {
         let googleQuery = "http://maps.google.com/?q=";
-        googleQuery = googleQuery + address;
-        return googleQuery;
+        googleQuery = googleQuery + this.selectedFood.address;
+        this.selectedFood.address = googleQuery;
     }
 
     getFoods(): void {
@@ -60,7 +59,9 @@ export class FoodComponent implements OnInit {
     selectRandomFood(): void {
         //let id = this.getRandomFood();
         this.selectedFood = this.getRandomFood();
+        this.getGoogleMap();
     }
+
 
     getRandomFood(): Food{
         let min = 0;

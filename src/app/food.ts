@@ -5,5 +5,6 @@ export class Food {
     address: string;
     url: string; 
     image: string;
+    type: string;
     id: number;
 }

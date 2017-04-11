@@ -1,11 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { Router } from '@angular/router';
-
-
-import { FoodService } from './food.service';
-import { FOODS }       from './mock-foods'; 
-import { Food }        from './food';
+import { ActivatedRoute, Params } from '@angular/router';
+import { FoodService } from '../food.service';
+import { FOODS }       from '../mock-foods'; 
+import { Food }        from '../food';
 
 @Component({
     selector: 'my-food',
@@ -16,13 +15,23 @@ import { Food }        from './food';
 export class FoodComponent implements OnInit {
     foods: Food[];
     selectedFood: Food;
+    private foodParams: any;
+    private foodType: any;
 
     constructor(
         private foodService: FoodService,
-        private router: Router
+        private router: Router,
+        private route: ActivatedRoute
     ) {};
 
     ngOnInit(): void {
+        this.foodType = [];
+        this.route.params.subscribe(params => {
+            this.foodParams = params;
+        });
+        Object.keys(this.foodParams).forEach(i => {
+            this.foodType.push(this.foodParams[i])
+        });
         this.getFoods();
     }
 
@@ -39,7 +48,9 @@ export class FoodComponent implements OnInit {
     }
 
     getFoods(): void {
-        this.foodService.getFoods().then(foods => this.foods = foods);
+        this.foodService.getFoods().then(foods => {
+            this.foods = foods.filter(obj => this.foodType.indexOf(obj.type) > -1);
+        });
     }
 
     gotoDetail(): void {

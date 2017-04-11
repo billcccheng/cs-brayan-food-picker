@@ -1,0 +1,14 @@
+<h1>Home Page</h1>
+<div class="form-group">
+  <label for="options">Options:</label>
+  <div *ngFor="let option of options">
+    <label>
+      <input type="checkbox"
+        name="options"
+        value="{{option.value}}"
+        [(ngModel)]="option.checked"/>
+      {{option.name}}
+    </label>
+  </div>
+  <button (click)="onSelect()">Submit</button>
+</div>

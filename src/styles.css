@@ -1,19 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
 #wrap {
-    width:600px;
+    width:90%;
     margin:10px;
 }
 
 #left_col {
     float:left;
-    width:50%;
+    width:60%;
 }
 
-#right_col {
-    float:right;
-    width:50%;
-}
+/*
+ *#right_col {
+ *    float:right;
+ *    width:40%;
+ *}
+ */
 
 #homepage {
     margin-left:25px;
 }
+

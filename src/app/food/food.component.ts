@@ -15,7 +15,7 @@ import { Food }        from '../food';
 
 export class FoodComponent implements OnInit {
     foods: Food[];
-    selectedFood: Food;
+    selectedFood: any;
     private foodParams: any;
     private foodType: any;
 
@@ -35,6 +35,11 @@ export class FoodComponent implements OnInit {
             this.foodType.push(this.foodParams[i])
         });
         this.getFoods();
+        this.selectedFood = false;
+    }
+
+    goBackToSelection(): void {
+        this.selectedFood = false; 
     }
 
     getGoogleMap(): void {

@@ -1,29 +1,31 @@
 <div id="wrap">
   <div id="left_col">
-    <ul class="foods">
-      <button (click)="selectRandomFood()">Random Select</button>
-      <button (click)="goBack()">Back</button>
-      <li *ngFor="let food of foods"
-      (click)="onSelect(food)">
-      <span class="badge"></span> {{food.name}}
-      </li>
-    </ul>
-  </div>
-
-  <div id=right_col *ngIf="selectedFood">
-    <h2>{{selectedFood.name}}</h2>
-    <!--<button (click)="goBack()">Back</button>-->
-      <ul>
-        <li><label>Name: </label>{{selectedFood.name}}</li>
-        <li><label>Price: </label>{{selectedFood.price}}</li>
-        <li><a href="{{selectedFood.url}}">Take me to Yelp</a></li>
-        <li><a href="{{selectedFood.address}}">Google Map</a></li>
+    <div *ngIf="selectedFood==false">
+      <ul class="foods">
+        <button (click)="selectRandomFood()">Random Select</button>
+        <button (click)="goBack()">Back</button>
+        <li *ngFor="let food of foods"
+        (click)="onSelect(food)">
+        <span class="badge"></span> {{food.name}}
+        </li>
       </ul>
-    <div>
     </div>
-    <div>
-      <img src="{{selectedFood.image}}"  width="500" height="auto">
+
+    <div *ngIf="selectedFood">
+      <h2>{{selectedFood.name}}</h2>
+      <button (click)="goBackToSelection()">Back</button>
+        <ul>
+          <li><label>Name: </label>{{selectedFood.name}}</li>
+          <li><label>Price: </label>{{selectedFood.price}}</li>
+          <li><a href="{{selectedFood.url}}">Take me to Yelp</a></li>
+          <li><a href="{{selectedFood.address}}">Google Map</a></li>
+        </ul>
+      <div>
+      </div>
+      <div>
+        <img class="image" src="{{selectedFood.image}}">
+      </div>
     </div>
   </div>
-
+  <div id="right_col"></div>
 </div>

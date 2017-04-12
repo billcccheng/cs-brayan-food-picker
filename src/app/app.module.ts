@@ -10,7 +10,6 @@ import { FoodDetailComponent } from './food-detail/food-detail.component';
 import { FoodService }         from './food.service';
 import { AppRoutingModule }    from './app-routing.module';
 import { HomeComponent }       from './home/home.component';
-import { ButtonsModule }       from 'ngx-bootstrap';
 
 
 @NgModule({
@@ -25,7 +24,6 @@ import { ButtonsModule }       from 'ngx-bootstrap';
     FormsModule,
     HttpModule,
     BrowserAnimationsModule,
-    ButtonsModule.forRoot(),
     AppRoutingModule
   ],
   providers: [FoodService],

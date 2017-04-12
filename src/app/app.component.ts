@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
-    title = 'This is the College Station / Bryan Food Random Picker';
+    title = 'Random Food Picker';
 }

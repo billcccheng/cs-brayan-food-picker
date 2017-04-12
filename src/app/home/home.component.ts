@@ -32,7 +32,8 @@ export class HomeComponent implements OnInit {
         this.foods.forEach(food => {
             if(foodType.indexOf(food.type) == -1 && food.type){
                 foodType.push(food.type);
-                this.options.push({name:this.capitalizeFirstLetter(food.type), value:food.type, checked:false});
+                let name = this.capitalizeFirstLetter(food.type)
+                this.options.push({name:name, value:food.type, checked:false});
             }
         });
     }

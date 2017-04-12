@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { FoodService } from '../food.service';
+import { FOODS }       from '../mock-foods'; 
+import { Food }        from '../food';
 
 @Component({
     selector: 'home',
@@ -7,29 +10,40 @@ import { Router } from '@angular/router';
 })
 
 export class HomeComponent implements OnInit {
+    foods: Food[];
+    options: any;
     constructor(
         private router: Router,
+        private foodService: FoodService,
     ) {}
 
     ngOnInit(): void {
-        //this.route.params
-            //.switchMap((params: Params) => this.heroService.getHero(+params['id']))
-            //.subscribe(hero => this.hero = hero);
+        this.foodService.getFoods().then(foods => {
+            this.foods = foods;
+            this.getOptions();
+        });
     }
 
+    getOptions() {
+        this.options = [];
+        let foodType = [];
+
+        this.foods.forEach(food => {
+            if(foodType.indexOf(food.type) == -1 && food.type){
+                foodType.push(food.type);
+                this.options.push({name:this.capitalizeFirstLetter(food.type), value:food.type, checked:false});
+            }
+        });
+    }
+
+    capitalizeFirstLetter(string) {
+		return string.charAt(0).toUpperCase() + string.slice(1);
+	}
+
     onSelect() {
-        console.log(this.getSelectedOptions()); 
         this.router.navigate(['/foods', this.getSelectedOptions()]);
     }
 
-    options = [
-        {name:'Chinese', value:'Chinese', checked:false},
-        {name:'Korean', value:'Korean', checked:false},
-        {name:'Japanese', value:'Japanese', checked:false},
-        {name:'Vietnamese', value:'Vietnamese', checked:false},
-        {name:'Italian', value:'Italian', checked:false},
-        {name:'Fast Food', value:'Fast Food', checked:false},
-    ]
 
     getSelectedOptions(): string[] { // right now: ['1','3']
         return this.options

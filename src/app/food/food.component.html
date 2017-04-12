@@ -2,9 +2,10 @@
   <div id="left_col">
     <ul class="foods">
       <button (click)="selectRandomFood()">Random Select</button>
+      <button (click)="goBack()">Back</button>
       <li *ngFor="let food of foods"
       (click)="onSelect(food)">
-      <span class="badge">{{food.id}}</span> {{food.name}}
+      <span class="badge"></span> {{food.name}}
       </li>
     </ul>
   </div>

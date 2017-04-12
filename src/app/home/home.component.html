@@ -1,5 +1,5 @@
 <h1>Home Page</h1>
-<div class="form-group">
+<div id="homepage" class="form-group">
   <label for="options">Options:</label>
   <div *ngFor="let option of options">
     <label>
@@ -10,5 +10,5 @@
       {{option.name}}
     </label>
   </div>
-  <button (click)="onSelect()">Submit</button>
+  <button type="button" class="btn btn-primary" (click)="onSelect()">Submit</button>
 </div>

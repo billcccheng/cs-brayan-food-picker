@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { Router } from '@angular/router';
+import { Component, OnInit }      from '@angular/core';
+import { RouterModule, Routes }   from '@angular/router';
+import { Router }                 from '@angular/router';
 import { ActivatedRoute, Params } from '@angular/router';
+import { Location }               from '@angular/common';
 import { FoodService } from '../food.service';
 import { FOODS }       from '../mock-foods'; 
 import { Food }        from '../food';
@@ -21,6 +22,7 @@ export class FoodComponent implements OnInit {
     constructor(
         private foodService: FoodService,
         private router: Router,
+        private location: Location,
         private route: ActivatedRoute
     ) {};
 
@@ -35,11 +37,6 @@ export class FoodComponent implements OnInit {
         this.getFoods();
     }
 
-    onSelect(food: Food): void {
-        this.selectedFood = food;
-        this.getGoogleMap();
-    }
-    
     getGoogleMap(): void {
         let googleQuery = "http://maps.google.com/?q=";
         googleQuery = googleQuery + this.selectedFood.address;
@@ -48,20 +45,14 @@ export class FoodComponent implements OnInit {
 
     getFoods(): void {
         this.foodService.getFoods().then(foods => {
-            this.foods = foods.filter(obj => this.foodType.indexOf(obj.type) > -1);
+            if(this.foodType.length != 0){
+                this.foods = foods.filter(obj => this.foodType.indexOf(obj.type) > -1);
+            }else{
+                console.log(foods);
+                this.foods = foods;
+            }
         });
     }
-
-    gotoDetail(): void {
-        this.router.navigate(['/detail', this.selectedFood.id]);
-    }
-    
-    selectRandomFood(): void {
-        //let id = this.getRandomFood();
-        this.selectedFood = this.getRandomFood();
-        this.getGoogleMap();
-    }
-
 
     getRandomFood(): Food{
         let min = 0;
@@ -70,6 +61,24 @@ export class FoodComponent implements OnInit {
         return this.foods[index];
     }
 
+    goBack(): void {
+        this.location.back();
+    }
+
+    gotoDetail(): void {
+        //this.router.navigate(['/detail', this.selectedFood.id]);
+    }
+    
+    onSelect(food: Food): void {
+        this.selectedFood = food;
+        this.getGoogleMap();
+    }
+
+    selectRandomFood(): void {
+        //let id = this.getRandomFood();
+        this.selectedFood = this.getRandomFood();
+        this.getGoogleMap();
+    }
 }
 
 

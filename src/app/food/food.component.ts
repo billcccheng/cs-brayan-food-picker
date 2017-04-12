@@ -28,6 +28,7 @@ export class FoodComponent implements OnInit {
 
     ngOnInit(): void {
         this.foodType = [];
+        this.selectedFood = false;
         this.route.params.subscribe(params => {
             this.foodParams = params;
         });
@@ -35,7 +36,6 @@ export class FoodComponent implements OnInit {
             this.foodType.push(this.foodParams[i])
         });
         this.getFoods();
-        this.selectedFood = false;
     }
 
     goBackToSelection(): void {
@@ -43,8 +43,7 @@ export class FoodComponent implements OnInit {
     }
 
     getGoogleMap(): void {
-        let googleQuery = "http://maps.google.com/?q=";
-        googleQuery = googleQuery + this.selectedFood.address;
+        let googleQuery = "http://maps.google.com/?q=" + this.selectedFood.address;
         this.selectedFood.address = googleQuery;
     }
 
@@ -80,7 +79,6 @@ export class FoodComponent implements OnInit {
     }
 
     selectRandomFood(): void {
-        //let id = this.getRandomFood();
         this.selectedFood = this.getRandomFood();
         this.getGoogleMap();
     }

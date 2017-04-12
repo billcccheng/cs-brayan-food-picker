@@ -1,7 +1,7 @@
 <h3>Home Page</h3>
+<button type="button" class="btn btn-primary" (click)="onSelect()">Submit</button>
 <div id="homepage" class="form-group">
-  <label for="options">Options:</label>
-  <div *ngFor="let option of options">
+  <ul class="checkbox-grid" *ngFor="let option of options">
     <label>
       <input type="checkbox"
         name="options"
@@ -9,6 +9,5 @@
         [(ngModel)]="option.checked"/>
       {{option.name}}
     </label>
-  </div>
-  <button type="button" class="btn btn-primary" (click)="onSelect()">Submit</button>
+  </ul>
 </div>

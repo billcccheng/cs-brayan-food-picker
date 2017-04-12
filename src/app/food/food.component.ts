@@ -44,7 +44,7 @@ export class FoodComponent implements OnInit {
 
     getGoogleMap(): void {
         let googleQuery = "http://maps.google.com/?q=" + this.selectedFood.address;
-        this.selectedFood.address = googleQuery;
+        this.selectedFood.googleMap = googleQuery;
     }
 
     getFoods(): void {

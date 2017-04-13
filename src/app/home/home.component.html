@@ -1,18 +1,14 @@
 <div id="home-page">
-  <div>
-    Select the categories you want to choose from!
-  </div>
-  <div class="form-group">
-    <ul>
-        <ul class="checkbox-grid "*ngFor="let option of options">
-          <label>
-            <input type="checkbox"
-              name="options"
-              value="{{option.value}}"
-              [(ngModel)]="option.checked"/>
-            {{option.name}}
-          </label>
-        </ul>
+Select the categories!
+  <div id="form-group">
+    <ul class="checkbox-grid "*ngFor="let option of options">
+      <label>
+        <input type="checkbox"
+          name="options"
+          value="{{option.value}}"
+          [(ngModel)]="option.checked"/>
+        {{option.name}}
+      </label>
     </ul>
   </div>
   <div id="submit-btn">

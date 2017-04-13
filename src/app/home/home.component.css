@@ -1,26 +1,66 @@
-.form-group {
-    padding-top: 5px;
+
+@media only screen 
+and (max-device-width : 425px) {
+    #form-group {
+        padding-top: 10px;
+        padding-left:20%;
+        /*padding-right:10%;*/
+    }
+
+    .checkbox-grid {
+        float: left;
+        width: 30%;
+        padding: 0;
+        margin: 3px;
+        margin-left:10px;
+        white-space: nowrap;
+        background-color:#6bc2ba;
+        border-radius: 5px;
+        color: white;
+        font-size: 80%;
+    }
+
+    #submit-btn {
+        width: 100%;
+        float: left;
+        margin-top: 10px;
+    }
+
+    #home-page {
+        margin-left: 5px;
+        padding-top: 15%;
+    }
+ 
 }
 
-.checkbox-grid {
-    float: left;
-    width: 25%;
-    padding: 0;
-    margin: 3px;
-    margin-right:10px;
-    white-space: nowrap;
-    background-color:#6bc2ba;
-    border-radius: 5px;
-	color: white;
-    font-size: 80%;
-}
 
-#submit-btn {
-    width: 100%;
-    float: left;
-    margin-top: 10px;
-}
+@media only screen 
+and (min-device-width : 668px) {
+    .form-group {
+    }
 
-#home-page {
-    margin-left: 5px;
+    .checkbox-grid {
+        float: left;
+        width: 15%;
+        padding: 0;
+        margin: 3px;
+        margin-right:10px;
+        white-space: nowrap;
+        background-color:#6bc2ba;
+        border-radius: 5px;
+        color: white;
+        font-size: 80%;
+    }
+
+    #submit-btn {
+        margin-top:10px;
+        width: 100%;
+        float: right;
+    }
+
+    #home-page {
+        margin-left: 5px;
+        padding-top: 50px;
+    }
+ 
 }

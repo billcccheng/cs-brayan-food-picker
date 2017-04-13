@@ -1,13 +1,15 @@
-
 #wrap {
     width: 100%;
-    margin: 10px;
+    height: 100%;
+    color: black; 
 }
 
-#left_col {
-    float: left;
-    width: 100%;
-}
+/*
+ *#left_col {
+ *    float: left;
+ *    width: 100%;
+ *}
+ */
 
 /*
  *#right_col {
@@ -15,11 +17,28 @@
  *    width:40%;
  *}
  */
+.header{
+    width: 100%;
+    height: 15%;
+    position: fixed;
+    top: 0px;
+    color: #f8dbaf;
+    background-color: #6bc2ba;
+    z-index: 999;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+.body {
+    padding-top: 20%;
+    /*border-style: dotted;*/
+}
 .footer{
     width: 100%;
     height: 5%;
     position: fixed;
     bottom: 0px;
-    color: white;
-    background-color: #800000;
+    color: #f8dbaf;
+    background-color: #6bc2ba;
+    z-index: 999;
+    font-family: 'Montserrat', sans-serif;
 }

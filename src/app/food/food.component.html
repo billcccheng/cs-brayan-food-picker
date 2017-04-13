@@ -1,30 +1,27 @@
-<div id="wrap">
-  <div id="left_col">
-    <div *ngIf="selectedFood==false">
-      <ul class="foods">
-        <button (click)="selectRandomFood()">Random Select</button>
-        <button (click)="goBack()">Back</button>
-        <li *ngFor="let food of foods"
-        (click)="onSelect(food)">
-        <span class="badge"></span> {{food.name}}
-        </li>
-      </ul>
-    </div>
+<div id="food-component">
+  <div *ngIf="selectedFood==false">
+    <ul class="foods">
+      <button type="button" class="btn btn-warning" (click)="goBack()">Back</button>
+      <button type="button" class="btn btn-primary" (click)="selectRandomFood()">Random Select</button>
+      <li *ngFor="let food of foods"
+      (click)="onSelect(food)">
+      <span class="badge"></span> {{food.name}}
+      </li>
+    </ul>
+  </div>
 
-    <div *ngIf="selectedFood">
-      <h2>{{selectedFood.name}}</h2>
-      <button (click)="goBackToSelection()">Back</button>
-        <ul>
-          <li><label>Name: </label>{{selectedFood.name}}</li>
-          <li><label>Price: </label>{{selectedFood.price}}</li>
-          <li><a href="{{selectedFood.url}}">Take me to Yelp</a></li>
-          <li><a href="{{selectedFood.googleMap}}">Google Map</a></li>
-        </ul>
-      <div>
-      </div>
-      <div>
-        <img class="image" src="{{selectedFood.image}}">
-      </div>
+  <div *ngIf="selectedFood">
+    <h2>{{selectedFood.name}}</h2>
+    <button type="button" class="btn btn-warning" (click)="goBackToSelection()">Back</button>
+      <ul>
+        <li><label>Price: </label>{{selectedFood.price}}</li>
+        <li><a href="{{selectedFood.url}}">Take me to Yelp</a></li>
+        <li><a href="{{selectedFood.googleMap}}">Google Map</a></li>
+      </ul>
+    <div>
+    </div>
+    <div>
+      <img id="food-image" class="image" src="{{selectedFood.image}}">
     </div>
   </div>
 </div>

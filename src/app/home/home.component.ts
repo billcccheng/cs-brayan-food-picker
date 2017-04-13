@@ -34,6 +34,7 @@ export class HomeComponent implements OnInit {
                 foodType.push(food.type);
                 let name = this.capitalizeFirstLetter(food.type)
                 this.options.push({name:name, value:food.type, checked:false});
+                this.options.sort(this.compare);
             }
         });
     }
@@ -42,15 +43,26 @@ export class HomeComponent implements OnInit {
 		return string.charAt(0).toUpperCase() + string.slice(1);
 	}
 
+	compare(a,b) {
+		if (a.name < b.name)
+			return -1;
+	  	if (a.name > b.name)
+	        return 1;
+	    return 0;
+	}
+
     onSelect() {
         this.router.navigate(['/foods', this.getSelectedOptions()]);
     }
 
+    onSelectAll() {
+      this.router.navigate(['/foods', this.options.map(opt => opt.value)]);
+    }
 
     getSelectedOptions(): string[] { // right now: ['1','3']
         return this.options
                   .filter(opt => opt.checked)
-                  .map(opt => opt.value)
+                  .map(opt => opt.value);
     }
 }
 

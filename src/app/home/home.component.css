@@ -3,13 +3,13 @@
 and (max-device-width : 425px) {
     #form-group {
         padding-top: 10px;
-        padding-left:20%;
+        padding-left:10%;
         /*padding-right:10%;*/
     }
 
     .checkbox-grid {
         float: left;
-        width: 30%;
+        width: 25%;
         padding: 0;
         margin: 3px;
         margin-left:10px;

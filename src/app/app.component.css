@@ -17,22 +17,27 @@
  *    width:40%;
  *}
  */
+#github{
+    z-index: 999;
+}
 @media only screen 
 and (max-device-width : 768px){
     .header{
         width: 100%;
-        height: 10%;
+        height: 65px;
         position: fixed;
         top: 0px;
         color: #f8dbaf;
         background-color: #6bc2ba;
-        z-index: 999;
+        z-index: 998;
         font-family: 'Montserrat', sans-serif;
         /*text-align: center;*/
     }
     .body {
         margin-top: 15%;
         /*border-style: dotted;*/
+        margin-bottom: 100px;
+        clear: both;
     }
     .footer{
         width: 100%;
@@ -41,7 +46,7 @@ and (max-device-width : 768px){
         bottom: 0px;
         color: #f8dbaf;
         background-color: #6bc2ba;
-        z-index: 999;
+        z-index: 998;
         font-family: 'Montserrat', sans-serif;
     }
 }
@@ -55,7 +60,7 @@ and (min-device-width : 768px) {
         top: 0px;
         color: #f8dbaf;
         background-color: #6bc2ba;
-        z-index: 999;
+        z-index: 998;
         font-family: 'Montserrat', sans-serif;
         /*text-align: center;*/
     }
@@ -70,7 +75,7 @@ and (min-device-width : 768px) {
         bottom: 0px;
         color: #f8dbaf;
         background-color: #6bc2ba;
-        z-index: 999;
+        z-index: 998;
         font-family: 'Montserrat', sans-serif;
     }
 }

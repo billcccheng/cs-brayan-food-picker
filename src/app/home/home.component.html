@@ -1,5 +1,9 @@
 <div id="home-page">
 Select the categories!
+  <div id="submit-btn">
+    <button type="button" class="btn btn-primary" (click)="onSelect()">Select</button>
+    <button type="button" class="btn btn-primary" (click)="onSelectAll()">Select All</button>
+  </div>
   <div id="form-group">
     <ul class="checkbox-grid "*ngFor="let option of options">
       <label>
@@ -10,9 +14,5 @@ Select the categories!
         {{option.name}}
       </label>
     </ul>
-  </div>
-  <div id="submit-btn">
-    <button type="button" class="btn btn-primary" (click)="onSelect()">Select</button>
-    <button type="button" class="btn btn-primary" (click)="onSelectAll()">Select All</button>
   </div>
 </div>

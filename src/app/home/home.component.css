@@ -2,7 +2,7 @@
 and (max-device-width : 425px) {
     #form-group {
         margin-top: 10px;
-        margin-left: 10%;
+        margin-left: 5%;
     }
 
     .checkbox-grid {
@@ -15,9 +15,9 @@ and (max-device-width : 425px) {
     }
 
     .submit-btn {
-        /*width: 100%;*/
-        margin: 5px 0px 5px 50px;
-        margin-left: 10%;
+        width: 100%;
+        margin: 5px 0px 0px 5%;
+        float: left;
     }
 
     #home-page {
@@ -45,10 +45,9 @@ and (min-device-width : 668px) {
     }
 
     .submit-btn {
-        margin-top: 10px;
-        margin-bottom: 10px;
+        margin: 5px 0px 5px 5px;
         width: 100%;
-        float: right;
+        float: left;
     }
 
     #home-page {

@@ -6,12 +6,10 @@ and (max-device-width : 425px) {
     }
 
     .checkbox-grid {
-        float: left;
         width: 25%;
         padding: 0;
         white-space: nowrap;
         border-radius: 5px;
-        font-size: 80%;
     }
 
     .submit-btn {
@@ -34,14 +32,11 @@ and (min-device-width : 668px) {
     }
 
     .checkbox-grid {
-        float: left;
         width: 15%;
         padding: 0;
-        margin: 3px;
         margin-right:10px;
         white-space: nowrap;
         border-radius: 5px;
-        font-size: 80%;
     }
 
     .submit-btn {
@@ -67,6 +62,7 @@ and (min-device-width : 668px) {
     overflow:auto;
     float:left;
     text-align: center;
+    font-size: 80%;
 }
 
 .checkbox-grid label span {

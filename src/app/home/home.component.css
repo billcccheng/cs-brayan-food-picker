@@ -1,30 +1,23 @@
-
 @media only screen 
 and (max-device-width : 425px) {
     #form-group {
-        padding-top: 10px;
-        padding-left:10%;
-        /*padding-right:10%;*/
+        margin-top: 10px;
+        margin-left: 10%;
     }
 
     .checkbox-grid {
         float: left;
         width: 25%;
         padding: 0;
-        margin: 3px;
-        margin-left:10px;
         white-space: nowrap;
-        background-color:#6bc2ba;
         border-radius: 5px;
-        color: white;
         font-size: 80%;
     }
 
-    #submit-btn {
-        width: 100%;
-        float: left;
-        margin-bottom:10px;
-        margin-top: 10px;
+    .submit-btn {
+        /*width: 100%;*/
+        margin: 5px 0px 5px 50px;
+        margin-left: 10%;
     }
 
     #home-page {
@@ -47,22 +40,45 @@ and (min-device-width : 668px) {
         margin: 3px;
         margin-right:10px;
         white-space: nowrap;
-        background-color:#6bc2ba;
         border-radius: 5px;
-        color: white;
         font-size: 80%;
     }
 
-    #submit-btn {
-        margin-top:10px;
-        margin-bottom:10px;
+    .submit-btn {
+        margin-top: 10px;
+        margin-bottom: 10px;
         width: 100%;
         float: right;
     }
 
     #home-page {
         margin-left: 5px;
-        padding-top: 50px;
+        margin-top: 100px;
     }
  
+}
+
+.checkbox-grid {
+    margin:4px;
+    background-color:#6bc2ba;
+    border-radius:4px;
+    color: white;
+    border:1px solid #D0D0D0;
+    overflow:auto;
+    float:left;
+    text-align: center;
+}
+
+.checkbox-grid label span {
+    padding:1px 0px;
+    display:block;
+}
+
+.checkbox-grid label input {
+    position:absolute;
+    top:-20px;
+}
+
+.checkbox-grid input:checked + span {
+    color:black;
 }

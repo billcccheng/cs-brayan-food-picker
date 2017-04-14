@@ -40,16 +40,16 @@ export class HomeComponent implements OnInit {
     }
 
     capitalizeFirstLetter(string) {
-		return string.charAt(0).toUpperCase() + string.slice(1);
-	}
+        return string.charAt(0).toUpperCase() + string.slice(1);
+    }
 
-	compare(a,b) {
-		if (a.name < b.name)
-			return -1;
-	  	if (a.name > b.name)
-	        return 1;
-	    return 0;
-	}
+    compare(a,b) {
+        if (a.name < b.name)
+            return -1;
+        if (a.name > b.name)
+            return 1;
+        return 0;
+    }
 
     onSelect() {
         this.router.navigate(['/foods', this.getSelectedOptions()]);

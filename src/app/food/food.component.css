@@ -51,10 +51,9 @@ button:hover {
 }
 
 #food-image {
-  max-width:70%;
+  width:50%;
   display: block;
-  margin: 20px 0px 20px 0px;
-  height:auto;
+  margin: 5px 0px 40px 0px;
 }
 
 

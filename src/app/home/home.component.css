@@ -74,11 +74,10 @@ and (min-device-width : 668px) {
     display:block;
 }
 
-.checkbox-grid label input {
-    position:absolute;
-    top:-20px;
-}
-
 .checkbox-grid input:checked + span {
     color:black;
+}
+
+.ck-button {
+    display:none;
 }

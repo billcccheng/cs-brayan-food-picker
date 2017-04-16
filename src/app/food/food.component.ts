@@ -38,6 +38,14 @@ export class FoodComponent implements OnInit {
         this.getFoods();
     }
 
+    compare(a,b) {
+        if (a.name < b.name)
+            return -1;
+        if (a.name > b.name)
+            return 1;
+        return 0;
+    }
+
     goBackToSelection(): void {
         this.selectedFood = false; 
     }
@@ -52,16 +60,16 @@ export class FoodComponent implements OnInit {
             if(this.foodType.length != 0){
                 this.foods = foods.filter(obj => this.foodType.indexOf(obj.type) > -1);
             }else{
-                console.log(foods);
                 this.foods = foods;
             }
+            this.foods.sort(this.compare);
         });
     }
 
     getRandomFood(): Food{
         let min = 0;
         let max = Math.floor(this.foods.length) - 1;
-        let index = Math.floor(Math.random() * (max - min + 1)) + min;
+        let index = Math.floor(Math.random() * (max - min + 1));
         return this.foods[index];
     }
 

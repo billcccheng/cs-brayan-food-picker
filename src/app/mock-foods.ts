@@ -1,7 +1,7 @@
 import { Food } from './food';
 
 export const FOODS: Food[] = 
-    [
+[
     {
         "name": "Panda Express",
         "ratings": 3,

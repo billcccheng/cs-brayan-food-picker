@@ -70,7 +70,7 @@ and (max-device-width : 425px) {
 and (min-device-width : 668px) {
     #food-component {
       margin-left: 10px;
-      margin-top: 100px;
+      margin-top: 80px;
     }
     #food-image {
       width:50%;

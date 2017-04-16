@@ -1,7 +1,7 @@
 <div id="food-component">
   <div *ngIf="selectedFood==false">
-      <button type="button" class="btn btn-warning" (click)="goBack()">Back</button>
-      <button type="button" class="btn btn-primary" (click)="selectRandomFood()">Random Select</button>
+      <button type="button" class="btn btn-warning btn-sm" (click)="goBack()">Back</button>
+      <button type="button" class="btn btn-primary btn-sm" (click)="selectRandomFood()">Random Select</button>
     <ul class="foods">
       <li *ngFor="let food of foods"
       (click)="onSelect(food)">

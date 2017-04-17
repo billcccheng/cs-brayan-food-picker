@@ -2,7 +2,7 @@
 and (max-device-width : 425px) {
     #form-group {
         margin-top: 10px;
-        margin-left: 5%;
+        margin-left: 2%;
     }
 
     .checkbox-grid {
@@ -10,11 +10,12 @@ and (max-device-width : 425px) {
         padding: 0;
         white-space: nowrap;
         border-radius: 5px;
+        font-size: 80%;
     }
 
     .submit-btn {
         width: 100%;
-        margin: 0px 0px 5px 20px;
+        margin: 0px 0px 5px 10px;
         float: left;
     }
 
@@ -61,7 +62,6 @@ and (min-device-width : 668px) {
     overflow:auto;
     float:left;
     text-align: center;
-    font-size: 80%;
 }
 
 .checkbox-grid label span {

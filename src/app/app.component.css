@@ -45,7 +45,7 @@ and (max-device-width : 425px){
 and (min-device-width : 668px) {
     .header{
         width: 100%;
-        height: 10%;
+        height: 70px;
         position: fixed;
         top: 0px;
         color: #f8dbaf;
@@ -60,7 +60,7 @@ and (min-device-width : 668px) {
     }
     .footer{
         width: 100%;
-        height: 5%;
+        height: 25px;
         position: fixed;
         bottom: 0px;
         color: #f8dbaf;

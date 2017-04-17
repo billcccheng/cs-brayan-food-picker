@@ -1,7 +1,7 @@
 import { Food } from './food';
 
 export const FOODS: Food[] = 
-[
+    [
     {
         "name": "Panda Express",
         "ratings": 3,
@@ -246,7 +246,7 @@ export const FOODS: Food[] =
         "name": "First watch",
         "ratings": 4,
         "price": "$$",
-        "type": "Breakfast",
+        "type": "Brunch",
         "address": "4501 S Texas Ave College Station, TX 77802",
         "url": "https://www.yelp.com/biz/first-watch-college-station?adjust_creative=PxLmhAI3hipuUVh8z5M3VQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=PxLmhAI3hipuUVh8z5M3VQ",
         "image": "https://s3-media2.fl.yelpcdn.com/bphoto/vHp1ZHN8a0um5O1c1fgzJA/o.jpg",
@@ -476,7 +476,7 @@ export const FOODS: Food[] =
         "name": "IHOP",
         "ratings": 2.5,
         "price": "$",
-        "type": "Breakfast",
+        "type": "Brunch",
         "address": "103 College Ave College Station, TX 77840",
         "url": "https://www.yelp.com/biz/ihop-college-station?adjust_creative=PxLmhAI3hipuUVh8z5M3VQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=PxLmhAI3hipuUVh8z5M3VQ",
         "image": "https://s3-media3.fl.yelpcdn.com/bphoto/4wVW-sq93__lW7FsP6wbQg/o.jpg",
@@ -821,5 +821,86 @@ export const FOODS: Food[] =
         "url": "https://www.yelp.com/biz/whataburger-college-station-2?adjust_creative=PxLmhAI3hipuUVh8z5M3VQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=PxLmhAI3hipuUVh8z5M3VQ",
         "image": "https://s3-media2.fl.yelpcdn.com/bphoto/M1Mom0iwtim03TCTHxfeyg/o.jpg",
         "id": 82
+    },
+    {
+        "name": "Dixie Chicken",
+        "ratings": 3.5,
+        "price": "$",
+        "type": "American",
+        "address": "307 University Dr College Station, TX 77840",
+        "url": "https://www.yelp.com/biz/dixie-chicken-college-station?adjust_creative=PxLmhAI3hipuUVh8z5M3VQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=PxLmhAI3hipuUVh8z5M3VQ",
+        "image": "https://s3-media2.fl.yelpcdn.com/bphoto/g_zS_O_ijIrs9EBGXKUX7w/o.jpg",
+        "id": 83
+    },
+    {
+        "name": "Newk's",
+        "ratings": 3.5,
+        "price": "$",
+        "type": "Pizza",
+        "address": "1613 University Dr E College Station, TX 77840",
+        "url": "https://www.yelp.com/biz/newks-college-station?adjust_creative=PxLmhAI3hipuUVh8z5M3VQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=PxLmhAI3hipuUVh8z5M3VQ",
+        "image": "https://s3-media4.fl.yelpcdn.com/bphoto/br0RIuu_AW1cW8XOxZatUw/o.jpg",
+        "id": 84
+    },
+    {
+        "name": "Buffalo Wild wings",
+        "ratings": 2.5,
+        "price": "$$",
+        "type": "Chicken Wings",
+        "address": "903 University Dr College Station, TX 77840",
+        "url": "https://www.yelp.com/biz/buffalo-wild-wings-college-station?adjust_creative=PxLmhAI3hipuUVh8z5M3VQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=PxLmhAI3hipuUVh8z5M3VQ",
+        "image": "https://s3-media3.fl.yelpcdn.com/bphoto/no_uzCb0EyCBXa8NOmFBtw/o.jpg",
+        "id": 85
+    },
+    {
+        "name": "Wings' N More",
+        "ratings": 3.5,
+        "price": "$$",
+        "type": "Chicken Wings",
+        "address": "3230 S Texas Ave College Station, TX 77845",
+        "url": "https://www.yelp.com/biz/wings-n-more-college-station-2?adjust_creative=PxLmhAI3hipuUVh8z5M3VQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=PxLmhAI3hipuUVh8z5M3VQ",
+        "image": "https://s3-media1.fl.yelpcdn.com/bphoto/jzXubael6-mWJlUaA4QRFg/o.jpg",
+        "id": 86
+    },
+    {
+        "name": "Wingstop",
+        "ratings": 2.5,
+        "price": "$",
+        "type": "Chicken Wings",
+        "address": "700 University Dr E College Station, TX 77840",
+        "url": "https://www.yelp.com/biz/wingstop-college-station?adjust_creative=PxLmhAI3hipuUVh8z5M3VQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=PxLmhAI3hipuUVh8z5M3VQ",
+        "image": "https://s3-media1.fl.yelpcdn.com/bphoto/0AFqNeTX5eEkJbLJVY3ZKA/o.jpg",
+        "id": 87
+    },
+    {
+        "name": "Mickey's Sliders",
+        "ratings": 4.5,
+        "price": "$",
+        "type": "Burgers",
+        "address": "700 University Dr E Ste C College Station, TX 77840",
+        "url": "https://www.yelp.com/biz/mickeys-sliders-college-station?adjust_creative=PxLmhAI3hipuUVh8z5M3VQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=PxLmhAI3hipuUVh8z5M3VQ",
+        "image": "https://s3-media1.fl.yelpcdn.com/bphoto/SrZ5lQv0KaToFAd59AJnbw/o.jpg",
+        "id": 88
+    },
+    {
+        "name": "Firehouse Subs",
+        "ratings": 3.5,
+        "price": "$",
+        "type": "Sandwiches",
+        "address": "1507 S Texas Ave College Station, TX 77840",
+        "url": "https://www.yelp.com/biz/firehouse-subs-college-station-2?adjust_creative=PxLmhAI3hipuUVh8z5M3VQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=PxLmhAI3hipuUVh8z5M3VQ",
+        "image": "https://s3-media2.fl.yelpcdn.com/bphoto/MopfcHtsBIcPyY3MgaT8-g/o.jpg",
+        "id": 89
+    },
+    {
+        "name": "BJ’s Restaurant & Brewhouse",
+        "ratings": 3,
+        "price": "$$",
+        "type": "American",
+        "address": "1520 Harvey Rd College Station, TX 77598",
+        "url": "https://www.yelp.com/biz/bjs-restaurant-and-brewhouse-college-station-2?adjust_creative=PxLmhAI3hipuUVh8z5M3VQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=PxLmhAI3hipuUVh8z5M3VQ",
+        "image": "https://s3-media1.fl.yelpcdn.com/bphoto/jnbYtQwCuR_DL-6YZBCZXQ/o.jpg",
+        "id": 90
     }
 ];
+

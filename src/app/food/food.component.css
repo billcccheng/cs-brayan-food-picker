@@ -59,8 +59,8 @@ and (max-device-width : 425px) {
       margin-top: 75px;
     }
     #food-image {
-      width:75%;
-      height:auto;
+      width: auto;
+      height: 200px;
       display: block;
       margin: 0 auto;
     }
@@ -73,7 +73,8 @@ and (min-device-width : 668px) {
       margin-top: 80px;
     }
     #food-image {
-      width:50%;
+      width: auto;
+      height: 350px;
       display: block;
       margin: 5px 0px 40px 0px;
     }

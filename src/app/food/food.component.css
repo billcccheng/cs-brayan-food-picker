@@ -60,7 +60,7 @@ and (max-device-width : 425px) {
     }
     #food-image {
       width: auto;
-      height: 200px;
+      height: 150px;
       display: block;
       margin: 0 auto;
     }

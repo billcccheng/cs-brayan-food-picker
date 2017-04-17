@@ -1,6 +1,6 @@
-# MyApp
+# CS Bryan Random Food Picker
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
+This is an Angular project that randomly picks a restaurant for you.
 
 ## Development server
 

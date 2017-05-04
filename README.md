@@ -1,4 +1,4 @@
-# cs-bryan-food-picker
+# CS/Bryan Food Picker
 
 One Paragraph of project description goes here
 
